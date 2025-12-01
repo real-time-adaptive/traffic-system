@@ -31,3 +31,8 @@ lerna-debug.log*
 
 # misc
 .DS_Store
+
+# local db files (not the drizzle migration folder)
+*.db
+*.db-shm
+*.db-wal
