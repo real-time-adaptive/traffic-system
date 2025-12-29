@@ -42,6 +42,22 @@ export const ReadingResponseSchema = z.object({
   timestamp: z.string(),
 });
 
+// Preference Schemas
+export const DevicePreferencesSchema = z.object({
+  id: z.number(),
+  deviceId: z.string(),
+  disabledPins: z.array(z.number()),
+  samplingRateMs: z.number(),
+  jamThresholdCm: z.number(),
+  updatedAt: z.string(),
+});
+
+export const UpdatePreferencesSchema = z.object({
+  disabledPins: z.array(z.number()).optional(),
+  samplingRateMs: z.number().min(100).max(10000).optional(),
+  jamThresholdCm: z.number().min(10).max(500).optional(),
+});
+
 // Command Schemas
 export const CommandSchema = z.object({
   id: z.number(),

@@ -5,6 +5,7 @@ import { cors } from "hono/cors";
 import devices from "./routes/devices";
 import readings from "./routes/readings";
 import commandsRouter from "./routes/commands";
+import preferences from "./routes/preferences";
 
 const app = new Hono();
 
@@ -24,6 +25,7 @@ app.use(
 app.route("/devices", devices);
 app.route("/readings", readings);
 app.route("/commands", commandsRouter);
+app.route("/preferences", preferences);
 
 app.get("/", (c) => {
   return c.json({
