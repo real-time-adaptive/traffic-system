@@ -4,6 +4,9 @@
   "main": "src/index.ts",
   "compatibility_date": "2025-12-01",
   "compatibility_flags": ["nodejs_compat"],
+  "vars": {
+    "CORS_ORIGIN": "http://localhost:3001"
+  },
   "kv_namespaces": [],
   "d1_databases": [],
   "services": [],
