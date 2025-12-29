@@ -3,13 +3,14 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
-    "build": "wrangler deploy --dry-run",
-    "deploy": "wrangler deploy --minify",
-    "cf-typegen": "wrangler types --env-interface CloudflareBindings",
+    "build": "echo '🔄 Running database migrations...' && pnpm run db:push && echo '📦 Building for deployment...' && wrangler deploy --dry-run",
+    "deploy": "echo '☁️  Deploying to Cloudflare Workers...' && wrangler deploy --minify",
+    "deploy:quick": "wrangler deploy --minify",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
   },
   "dependencies": {
     "@libsql/client": "^0.15.15",
