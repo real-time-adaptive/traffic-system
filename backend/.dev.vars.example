@@ -1,0 +1,5 @@
+TURSO_DB_URL=your_turso_db_url_here
+TURSO_DB_AUTH_TOKEN=your_turso_db_auth_token_here
+BETTER_AUTH_SECRET=your_better_auth_secret_here
+RESEND_API_KEY=your_resend_api_key_here
+CORS_ORIGIN=http://localhost:3000

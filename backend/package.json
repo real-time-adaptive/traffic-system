@@ -3,17 +3,20 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
+    "build": "wrangler deploy --dry-run",
     "deploy": "wrangler deploy --minify",
     "cf-typegen": "wrangler types --env-interface CloudflareBindings",
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate"
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
     "@libsql/client": "^0.15.15",
-    "better-auth": "^1.4.4",
     "drizzle-orm": "^0.44.7",
     "hono": "^4.10.7",
-    "resend": "^6.5.2"
+    "nanoid": "^5.1.6",
+    "zod": "^4.2.1"
   },
   "devDependencies": {
     "@types/node": "^24.10.1",

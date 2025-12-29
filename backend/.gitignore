@@ -2,8 +2,8 @@
 dist/
 
 # dev
-.yarn/
-!.yarn/releases
+.pnpm/
+!.pnpm/pnpm-workspace.yaml
 .vscode/*
 !.vscode/launch.json
 !.vscode/*.code-snippets
