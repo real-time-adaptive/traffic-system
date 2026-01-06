@@ -82,7 +82,7 @@ export const CommandIdParamSchema = z.object({
 });
 
 export const DeviceIdQuerySchema = z.object({
-  device_id: z.string(),
+  deviceId: z.string(),
 });
 
 // Response Schemas
